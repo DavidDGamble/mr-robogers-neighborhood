@@ -1,5 +1,7 @@
-function isNumber (input) {
+function isValidNumber (input) {
   if (isNaN(input)) {
+    return false;
+  } else if (input < 0) {
     return false;
   } else {
     return true;
@@ -43,5 +45,17 @@ function numberSwap(numberArray) {
   return numberArray.join(', ');
 } 
 
-console.log(numberSwap([0, 1, 2, 3, 4, 5]));
-console.log(numberSwap([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]));
+function handleSubmit(event) {
+  event.preventDefault();
+  const numInput = document.getElementById('input').value;
+  if (!isNumber(numInput)) {
+    document.getElementById('output').innerText = 'PLEASE ENTER A NUMBER!';
+  } else {
+    document.getElementById('output').innerText = numberSwap(toNumberArray(numInput));
+  }
+}
+
+window.addEventListener("load" , function(){
+  let form = document.querySelector("form");
+  form.addEventListener("submit" , handleSubmit);
+});

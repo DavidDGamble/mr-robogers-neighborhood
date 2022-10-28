@@ -1,10 +1,13 @@
-Desciption: isNumber()
+Desciption: isValidNumber()
 
 Test: "Should check to see if the input is a number and return a boolean."
-Code: isNumber(5)
+Code: isValidNumber(5)
 Expected Output: true
 
-Code: isNumber('words')
+Code: isValidNumber('words')
+Expected Output: false
+
+Code: isValidNumber(-5)
 Expected Output: false
 
 Description: toNumberArray()
