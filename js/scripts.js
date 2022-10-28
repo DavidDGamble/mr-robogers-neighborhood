@@ -55,6 +55,9 @@ function numberSwap(numberArray, name) {
 
 function handleSubmit(event) {
   event.preventDefault();
+  if (document.getElementById('hidden').classList.contains('hidden') === false) {
+    document.getElementById('hidden').setAttribute('class', 'hidden');
+  }
   const numInput = document.getElementById('numInput').value;
   const nameInput = document.getElementById('nameInput').value;
   if (!isValidNumber(numInput)) {
@@ -83,6 +86,7 @@ function handleButton(event) {
   } else {
     document.getElementById('output').textContent = numberSwap(toNumberArray(numInput).reverse(), nameInput);
     document.getElementById('output').style.color = 'yellow';
+    document.getElementById('hidden').removeAttribute('class');
   }
 }
 
