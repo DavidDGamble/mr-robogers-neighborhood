@@ -1,4 +1,4 @@
-function isValidNumber (input) {
+function isValidNumber(input) {
   if (isNaN(input)) {
     return false;
   } else if (input < 0) {
@@ -48,7 +48,7 @@ function numberSwap(numberArray) {
 function handleSubmit(event) {
   event.preventDefault();
   const numInput = document.getElementById('input').value;
-  if (!isNumber(numInput)) {
+  if (!isValidNumber(numInput)) {
     document.getElementById('output').innerText = 'PLEASE ENTER A NUMBER!';
   } else {
     document.getElementById('output').innerText = numberSwap(toNumberArray(numInput));
