@@ -36,7 +36,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
 
-```Desciption: isValidNumber()
+```
+Desciption: isValidNumber()
 
 Test: "Should check to see if the input is a number and return a boolean."
 Code: isValidNumber(5)
@@ -47,6 +48,16 @@ Expected Output: false
 
 Code: isValidNumber(-5)
 Expected Output: false
+
+Description: isValidName()
+
+Test: "Should check to see if a name was entered into the input."
+Code: isValidName('david')
+Expected Output: true
+
+Code: isValidName('')
+Expected Output: false
+
 
 Description: toNumberArray()
 
@@ -61,4 +72,5 @@ Code: numberSwap([0, 1, 2, 3, 4, 5])
 Expected Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5
 
 Code: numberSwap([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
-Expected Output: 0, "Beep", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!"```
+Expected Output: 0, "Beep", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!"
+```

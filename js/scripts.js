@@ -8,6 +8,14 @@ function isValidNumber(input) {
   }
 }
 
+function isValidName(input) {
+  if (input.trim().length === 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 function toNumberArray(number) {
   let num = number;
   let numArray = [];
