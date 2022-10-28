@@ -47,7 +47,7 @@ function numberSwap(numberArray) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  const numInput = document.getElementById('input').value;
+  const numInput = document.getElementById('numInput').value;
   if (!isValidNumber(numInput)) {
     document.getElementById('output').innerText = 'PLEASE ENTER A NUMBER!';
   } else {
