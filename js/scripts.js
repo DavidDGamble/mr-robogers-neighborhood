@@ -1,5 +1,5 @@
 function isValidNumber(input) {
-  if (isNaN(input)) {
+  if (isNaN(parseInt(input))) {
     return false;
   } else if (input < 0) {
     return false;
@@ -27,7 +27,7 @@ function toNumberArray(number) {
   return numArray;
 }
 
-function numberSwap(numberArray) {
+function numberSwap(numberArray, name) {
   numberArray.forEach(function(element) {
     let currentNumArray = element.toString().split('');
     let has1 = false;
@@ -43,7 +43,7 @@ function numberSwap(numberArray) {
       }
     });
     if (has3) {
-      numberArray[element] = '"Won\'t you be my neighbor?"';
+      numberArray[element] = '"Won\'t you be my neighbor, ' + name + '?"';
     } else if (has2) {
       numberArray[element] = '"Boop!"';
     } else if (has1) {
@@ -56,10 +56,13 @@ function numberSwap(numberArray) {
 function handleSubmit(event) {
   event.preventDefault();
   const numInput = document.getElementById('numInput').value;
+  const nameInput = document.getElementById('nameInput').value;
   if (!isValidNumber(numInput)) {
-    document.getElementById('output').innerText = 'PLEASE ENTER A NUMBER!';
+    document.getElementById('output').innerText = 'PLEASE ENTER A VALID NUMBER!';
+  } else if (!isValidName(nameInput)) {
+    document.getElementById('output').innerText = 'PLEASE ENTER A NAME!';
   } else {
-    document.getElementById('output').innerText = numberSwap(toNumberArray(numInput));
+    document.getElementById('output').innerText = numberSwap(toNumberArray(numInput), nameInput);
   }
 }
 
