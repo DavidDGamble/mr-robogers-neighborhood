@@ -69,7 +69,28 @@ function handleSubmit(event) {
   }
 }
 
-window.addEventListener("load" , function(){
-  let form = document.querySelector("form");
-  form.addEventListener("submit" , handleSubmit);
+function handleButton(event) {
+  event.preventDefault();
+  let output = document.getElementById('output');
+  if (output.innerText === '') {
+    document.getElementById('output').innerText = 'NOTHING TO REVERSE!';
+    document.getElementById('output').style.color = 'red';
+  } else if (output.innerText === 'PLEASE ENTER A VALID NUMBER!' || output.innerText === 'PLEASE ENTER A NAME!') {
+    document.getElementById('output').innerText = 'NOTHING TO REVERSE!';
+    document.getElementById('output').style.color = 'red';
+  } else {
+
+    //-----------------------------------------------------------------------
+
+  }
+}
+
+window.addEventListener('load' , function(){
+  let form1 = document.querySelector('form#form1');
+  form1.addEventListener('submit' , handleSubmit);
+});
+
+window.addEventListener('load' , function(){
+  let form2 = document.querySelector('form#form2');
+  form2.addEventListener('submit' , handleButton);
 });
