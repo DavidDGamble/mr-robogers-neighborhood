@@ -59,10 +59,13 @@ function handleSubmit(event) {
   const nameInput = document.getElementById('nameInput').value;
   if (!isValidNumber(numInput)) {
     document.getElementById('output').innerText = 'PLEASE ENTER A VALID NUMBER!';
+    document.getElementById('output').style.color = 'red';
   } else if (!isValidName(nameInput)) {
     document.getElementById('output').innerText = 'PLEASE ENTER A NAME!';
+    document.getElementById('output').style.color = 'red';
   } else {
-    document.getElementById('output').innerText = numberSwap(toNumberArray(numInput), nameInput);
+    document.getElementById('output').textContent = numberSwap(toNumberArray(numInput), nameInput);
+    document.getElementById('output').style.color = 'white';
   }
 }
 
