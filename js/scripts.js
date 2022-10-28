@@ -71,6 +71,8 @@ function handleSubmit(event) {
 
 function handleButton(event) {
   event.preventDefault();
+  const numInput = document.getElementById('numInput').value;
+  const nameInput = document.getElementById('nameInput').value;
   let output = document.getElementById('output');
   if (output.innerText === '') {
     document.getElementById('output').innerText = 'NOTHING TO REVERSE!';
@@ -79,9 +81,8 @@ function handleButton(event) {
     document.getElementById('output').innerText = 'NOTHING TO REVERSE!';
     document.getElementById('output').style.color = 'red';
   } else {
-
-    //-----------------------------------------------------------------------
-
+    document.getElementById('output').textContent = numberSwap(toNumberArray(numInput).reverse(), nameInput);
+    document.getElementById('output').style.color = 'yellow';
   }
 }
 
